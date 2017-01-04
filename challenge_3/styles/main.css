@@ -1,3 +1,7 @@
+body {
+  color: #DDD;
+}
+
 blockquote {
   margin-left: 20px;
   padding: 0 15px;
@@ -7,6 +11,10 @@ blockquote {
 
 code, pre {
   color: green;
+}
+
+caption {
+  color: #DDD;
 }
 
 .great-success {
