@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> <!-- add ng-app="appTwo" to the html tag here -->
+<html ng-app="appTwo"> <!-- add ng-app="appTwo" to the html tag here -->
 <head>
   <title>Challenge 2</title>
   <meta charset="utf8" />
@@ -10,7 +10,7 @@
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- add Angular javascript here -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
   <script src="js/app.js"></script>
 </head>
 <body>
@@ -85,13 +85,13 @@ function WelcomeController(){
           Hello! My name is: {{ welcomeCtrl.full_name }}
         </li>
         <li>
-          I am {{ welcomeCtrl.age || "?" }} years old
+          I am {{ welcomeCtrl.age || 24 }} years old
         </li>
         <li>
-          I grew up in {{ welcomeCtrl.city || "???" }}, {{ welcomeCtrl.state || "??" }}
+          I grew up in {{ welcomeCtrl.city || "Bridgewater" }}, {{ welcomeCtrl.state || "New Jersey" }}
         </li>
         <li>
-          There are {{ "?" }} letters in my name
+          There are {{ 10 }} letters in my name
         </li>
         <li>
           <!-- HINT: create a 'shout' function in your controller! -->
@@ -101,18 +101,18 @@ function WelcomeController(){
     </section>
   </div>
 
-  <div id="add-your-controller"> <!-- HINT: Wrap this exercise in a new controller -->
+  <div ng-controller="MyController as myCtrl"> <!-- HINT: Wrap this exercise in a new controller -->
     <section class="exercises">
       <h4>Exercise #2:</h4>
       <p>Can you create a second controller for this exercise and then dynamically fill in the blanks?</p>
       <p>Describe your WDI class:</p>
       <ol>
-        <li>Class Name: {{ "class_name" }}</li>
-        <li>Students: {{ "enrolled_students" }}</li>
-        <li>Start: {{ "start_date" }}</li>
-        <li>End: {{ "end_date" }}</li>
+        <li>Class Name: {{ myCtrl.class_name }}</li>
+        <li>Students: {{ myCtrl.enrolled_students }}</li>
+        <li>Start: {{ myCtrl.start_date }}</li>
+        <li>End: {{ myCtrl.end_date }}</li>
         <!-- HINT: Create a daysRemaining() function in your controller that calculate this -->
-        <li>Days Left: {{ "daysRemaining()" }}</li>
+        <li>Days Left: {{ myCtrl.daysRemaining() }}</li>
       </ol>
     </section>
   </div>
