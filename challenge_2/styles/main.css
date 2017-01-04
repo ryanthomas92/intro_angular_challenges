@@ -5,6 +5,10 @@ blockquote {
   border-left: 4px solid #ddd;
 }
 
+code, pre {
+  color: green;
+}
+
 .great-success {
   color: #FFF;
   background-color: #77b300;
